@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="md:col-span-1">
           <h2 className="text-xl font-semibold text-pink-500 mb-4">
-            Phoenix Dental Care
+            Dr Divya's Phoenix Dental Care
           </h2>
           <p className="text-sm text-gray-500 mb-6">
             Gentle, advanced, and affordable dental care for confident smiles.
