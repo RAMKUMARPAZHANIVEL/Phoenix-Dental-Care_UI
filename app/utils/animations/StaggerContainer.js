@@ -11,7 +11,6 @@ export default function StaggerContainer({ children, className }) {
       whileInView="show"
       viewport={{
         once: true,      // animate only once
-        amount: 0.2,     // trigger when 20% visible
       }}
     >
       {children}

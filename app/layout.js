@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata = {
   title: "Phoenix Dental Care",
   description: "Dr. Divya's Phoenix Dental Care",
+   icons: {
+    icon: "/favicon.jpeg",
+  },
 };
 
 import { Montserrat, Inter } from "next/font/google";
