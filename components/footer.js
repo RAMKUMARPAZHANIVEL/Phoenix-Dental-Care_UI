@@ -3,7 +3,7 @@ import { FiPhone, FiMail } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t">
+    <footer className="bg-white border-t mt-20">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
         

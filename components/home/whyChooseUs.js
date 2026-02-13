@@ -1,5 +1,7 @@
 "use client";
 
+import { whatsappUrl } from "../../app/utils/config";
+
 // import { ArrowRight } from "lucide-react";
 
 const reasons = [
@@ -37,7 +39,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16" id="why-us">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-10 lg:grid-cols-3">
           
@@ -53,9 +55,14 @@ export default function WhyChooseUs() {
               high-quality care.
             </p>
 
-            <button className="mt-6 rounded-md bg-pink-500 px-6 py-3 text-sm font-medium text-white transition hover:bg-pink-600">
-              Book Appointment
-            </button>
+             <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary text-white px-6 py-3 rounded-xl shadow hover:scale-105 transition"
+              >
+                Book Appointment
+              </a>
           </div>
 
           {/* Cards */}
