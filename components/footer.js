@@ -20,7 +20,9 @@ export default function Footer() {
           <div className="flex space-x-4 text-gray-600">
             <FaFacebookF className="hover:text-pink-500 cursor-pointer transition" />
             <FaTwitter className="hover:text-pink-500 cursor-pointer transition" />
-            <FaInstagram className="hover:text-pink-500 cursor-pointer transition" />
+            <a target="_blank" href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ulrhf7o">
+               <FaInstagram className="hover:text-pink-500 cursor-pointer transition" />
+            </a>
             <FaLinkedinIn className="hover:text-pink-500 cursor-pointer transition" />
           </div>
         </div>

@@ -2,26 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const testimonials = [
-  {
-    name: "Suresh Kumar",
-    treatment: "Root Canal Treatment",
-    review:
-      "Dr Divya explained the procedure clearly and made me feel very comfortable. Completely painless experience!",
-  },
-  {
-    name: "Priya R",
-    treatment: "Teeth Whitening",
-    review:
-      "The clinic is very clean and modern. My smile looks amazing now. Highly recommended!",
-  },
-  {
-    name: "Arun S",
-    treatment: "Dental Implant",
-    review:
-      "Professional treatment and friendly staff. One of the best dental clinics in Chitlapakkam.",
-  },
-];
+import { testimonials } from "../../app/utils/config";
 
 export default function TestimonialSlider() {
   const [index, setIndex] = useState(0);

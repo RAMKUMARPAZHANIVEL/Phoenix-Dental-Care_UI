@@ -21,4 +21,25 @@ Treatment Required:
 Thank you.
 `;
 
+export const testimonials = [
+  {
+    name: "Suresh Kumar",
+    treatment: "Root Canal Treatment",
+    review:
+      "Dr Divya explained the procedure clearly and made me feel very comfortable. Completely painless experience!",
+  },
+  {
+    name: "Priya R",
+    treatment: "Teeth Whitening",
+    review:
+      "The clinic is very clean and modern. My smile looks amazing now. Highly recommended!",
+  },
+  {
+    name: "Arun S",
+    treatment: "Dental Implant",
+    review:
+      "Professional treatment and friendly staff. One of the best dental clinics in Chitlapakkam.",
+  },
+];
+
 export const whatsappUrl = `https://wa.me/919003226380?text=${encodeURIComponent(message)}`;
