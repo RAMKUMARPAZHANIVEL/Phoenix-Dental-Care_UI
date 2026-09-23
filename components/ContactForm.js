@@ -83,7 +83,7 @@ export default function ContactForm() {
     <form
       name="contact"
       method="POST"
-      data-netlify="true"
+      // data-netlify="true"
       onSubmit={handleSubmit}
       noValidate
       className="flex flex-col gap-5"
