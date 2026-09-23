@@ -1,82 +1,84 @@
+import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FiPhone, FiMail } from "react-icons/fi";
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import { practiceInfo } from "../app/utils/config";
+
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Team", href: "/team" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
     <footer className="bg-white border-t mt-20">
-      {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-4">
-        
+
         {/* Brand */}
         <div className="md:col-span-1">
           <h2 className="text-xl font-semibold text-pink-500 mb-4">
-            Dr Divya's Phoenix Dental Care
+            {practiceInfo.tagline}
           </h2>
           <p className="text-sm text-gray-500 mb-6">
             Gentle, advanced, and affordable dental care for confident smiles.
           </p>
-
-          {/* Social Icons */}
           <div className="flex space-x-4 text-gray-600">
             <FaFacebookF className="hover:text-pink-500 cursor-pointer transition" />
             <FaTwitter className="hover:text-pink-500 cursor-pointer transition" />
-            <a target="_blank" href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ulrhf7o">
-               <FaInstagram className="hover:text-pink-500 cursor-pointer transition" />
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=ulrhf7o">
+              <FaInstagram className="hover:text-pink-500 cursor-pointer transition" />
             </a>
             <FaLinkedinIn className="hover:text-pink-500 cursor-pointer transition" />
           </div>
         </div>
 
-        {/* Company */}
-        <div className="md:col-span-2">
+        {/* Navigation */}
+        <div className="md:col-span-1">
           <h4 className="font-semibold mb-4">Clinic</h4>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li>
-              <a href="#about" className="hover:text-primary transition">About Us</a>
-            </li>
-            <li>
-              <a href="#treatments" className="hover:text-primary transition">Treatments</a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-primary transition">Contact</a>
-            </li>
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-primary transition">
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Support */}
-        {/* <div>
-          <h4 className="font-semibold mb-4">Support</h4>
+        {/* Services quick links */}
+        <div className="md:col-span-1">
+          <h4 className="font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li className="hover:text-pink-500 cursor-pointer">Help Center</li>
-            <li className="hover:text-pink-500 cursor-pointer">Feedback</li>
-            <li className="hover:text-pink-500 cursor-pointer">Contact</li>
-            <li className="hover:text-pink-500 cursor-pointer">FAQs</li>
+            <li><Link href="/services/preventive-dentistry" className="hover:text-primary transition">Preventive Dentistry</Link></li>
+            <li><Link href="/services/cosmetic-dentistry" className="hover:text-primary transition">Cosmetic Dentistry</Link></li>
+            <li><Link href="/services/orthodontics" className="hover:text-primary transition">Orthodontics</Link></li>
+            <li><Link href="/services/root-canal-treatment" className="hover:text-primary transition">Root Canal Treatment</Link></li>
+            <li><Link href="/services" className="hover:text-primary transition font-medium">View All →</Link></li>
           </ul>
-        </div> */}
-
-        {/* Links */}
-        {/* <div> */}
-          {/* <h4 className="font-semibold mb-4">Links</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li className="hover:text-pink-500 cursor-pointer">Treatments</li>
-            <li className="hover:text-pink-500 cursor-pointer">Doctors</li>
-            <li className="hover:text-pink-500 cursor-pointer">Appointments</li>
-            <li className="hover:text-pink-500 cursor-pointer">All in One</li>
-          </ul> */}
-        {/* </div> */}
+        </div>
 
         {/* Contact */}
         <div>
-          <h4 className="font-semibold mb-4 ml-auto">Contact Us</h4>
+          <h4 className="font-semibold mb-4">Contact Us</h4>
           <div className="space-y-3 text-sm text-gray-600">
-            {/* <p>Phoenix Dental Care, <br /> Anna Street, Chitlapakkam, <br /> Chennai - 600064</p> */}
-            <div className="flex items-center gap-2">
-              <FiPhone className="text-pink-500" />
-              <span>+91 90032 26380</span>
+            <div className="flex gap-2">
+              <FiMapPin className="text-pink-500 mt-0.5 shrink-0" />
+              <span>{practiceInfo.address}</span>
             </div>
             <div className="flex items-center gap-2">
-              <FiMail className="text-pink-500" />
-              <span>phoenixdentalc@gmail.com</span>
+              <FiPhone className="text-pink-500 shrink-0" />
+              <a href={`tel:${practiceInfo.phone.replace(/\s/g, "")}`} className="hover:text-primary transition">
+                {practiceInfo.phone}
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <FiMail className="text-pink-500 shrink-0" />
+              <a href={`mailto:${practiceInfo.email}`} className="hover:text-primary transition">
+                {practiceInfo.email}
+              </a>
             </div>
           </div>
         </div>
@@ -89,8 +91,6 @@ export default function Footer() {
           <div className="flex space-x-6 mt-2 md:mt-0">
             <span className="hover:text-pink-500 cursor-pointer">Privacy Policy</span>
             <span className="hover:text-pink-500 cursor-pointer">Terms of Use</span>
-            <span className="hover:text-pink-500 cursor-pointer">Legal</span>
-            <span className="hover:text-pink-500 cursor-pointer">Site Map</span>
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ const OurDoctor = () => {
      </div>
     <div className='mx-auto mt-20'>
         <h3 className="text-primary text-3xl font-bold text-center mb-10">Our Dental Team</h3> 
-        <div>
+        <div className='mx-2'>
             <p className='font-medium my-3'>
                 Behind every smile we create is a team of qualified dental professionals and caring support staff.
                 Together, we ensure:

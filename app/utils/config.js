@@ -43,3 +43,13 @@ export const testimonials = [
 ];
 
 export const whatsappUrl = `https://wa.me/919003226380?text=${encodeURIComponent(message)}`;
+
+export const practiceInfo = {
+  name: "Phoenix Dental Care",
+  tagline: "Dr. Divya's Phoenix Dental Care",
+  address: "No 58/60, Ground Floor, Anna Street, Chitlapakkam, Chennai - 600064",
+  phone: "+91 90032 26380",
+  email: "phoenixdentalc@gmail.com",
+  openingHours: ["Monday – Saturday: 9:00 AM – 8:00 PM", "Sunday: By Appointment Only"],
+  mapUrl: "https://maps.google.com/?q=Phoenix+Dental+Care+Chitlapakkam+Chennai",
+};
