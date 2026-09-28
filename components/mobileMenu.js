@@ -58,7 +58,7 @@ export default function MobileMenu() {
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
-            className="fixed top-0 right-0 h-full w-72 bg-white z-50 p-3 rounded-sm animate-slide-in"
+            className="fixed top-0 right-0 h-screen w-72 bg-white z-50 p-3 rounded-sm animate-slide-in overflow-y-auto"
           >
             <div className="p-4 flex justify-between items-center border-b">
               <h3 className="text-lg font-semibold">Menu</h3>
